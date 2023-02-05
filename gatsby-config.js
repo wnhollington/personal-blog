@@ -9,19 +9,22 @@
  */
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Starter Blog`,
+    title: `W. Neal Hollington`,
     author: {
-      name: `Kyle Mathews`,
-      summary: `who lives and works in San Francisco building useful things.`,
+      name: `W. Neal Hollington`,
+      summary: `Attorney and Author`,
     },
-    description: `A starter blog demonstrating what Gatsby can do.`,
-    siteUrl: `https://gatsbystarterblogsource.gatsbyjs.io/`,
+    description: `Personal blog for W. Neal Hollington`,
+    siteUrl: `https://www.nealhollington.com/`,
     social: {
-      twitter: `kylemathews`,
+      twitter: `wnhollington`,
     },
   },
   plugins: [
     `gatsby-plugin-image`,
+    `gatsby-transformer-sharp`,
+    `gatsby-plugin-sharp`,
+    'gatsby-plugin-postcss',
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -56,8 +59,6 @@ module.exports = {
         ],
       },
     },
-    `gatsby-transformer-sharp`,
-    `gatsby-plugin-sharp`,
     {
       resolve: `gatsby-plugin-feed`,
       options: {
@@ -102,7 +103,7 @@ module.exports = {
               }
             }`,
             output: "/rss.xml",
-            title: "Gatsby Starter Blog RSS Feed",
+            title: "W. Neal Hollington RSS Feed",
           },
         ],
       },
@@ -110,8 +111,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Gatsby Starter Blog`,
-        short_name: `Gatsby`,
+        name: `W. Neal Hollington`,
+        short_name: `W. Neal Hollington`,
         start_url: `/`,
         background_color: `#ffffff`,
         // This will impact how browsers show your PWA/website
