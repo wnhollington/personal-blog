@@ -46,8 +46,8 @@ const MobileNav = () => {
 
             <div className="absolute bottom-0 text-center mx-4">
 
-            <Link to="/" className="m-1">Privacy Policy</Link>
-            <Link to="/" className="m-1">Disclaimer</Link>
+            <Link to="/privacy-policy" className="m-1">Privacy Policy</Link>
+            <Link to="/disclaimer" className="m-1">Disclaimer</Link>
 
             <div>
               © {new Date().getFullYear()}, <a href="https://www.gatsbyjs.com" target="_blank">Built with <GrGatsbyjs className="inline"/></a>
