@@ -17,7 +17,8 @@ module.exports = {
     description: `Personal blog for W. Neal Hollington`,
     siteUrl: `https://www.nealhollington.com/`,
     social: {
-      twitter: `wnhollington`,
+      twitter: `https://www.twitter.com/wnealhollington`,
+      linkedin: `https://www.linkedin.com/in/wnhollington`
     },
   },
   plugins: [
