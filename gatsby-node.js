@@ -8,7 +8,8 @@ const path = require(`path`)
 const { createFilePath } = require(`gatsby-source-filesystem`)
 
 // Define the template for blog post
-const blogPost = path.resolve(`./src/templates/blog-post.js`)
+const postTemplate = path.resolve(`./src/templates/blog-post.js`)
+const pageTemplate = path.resolve(`./src/templates/page.js`)
 
 /**
  * @type {import('gatsby').GatsbyNode['createPages']}
@@ -18,16 +19,32 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
 
   // Get all markdown blog posts sorted by date
   const result = await graphql(`
-    {
-      allMarkdownRemark(sort: { frontmatter: { date: ASC } }, limit: 1000) {
-        nodes {
-          id
-          fields {
-            slug
+      {
+        posts: allMarkdownRemark(
+          sort: { frontmatter: { date: ASC } }, 
+          limit: 1000
+          filter: {frontmatter: {type: {eq: "post"}}}
+          ) {
+          nodes {
+            id
+            fields {
+              slug
+            }
+          }
+        }
+        pages: allMarkdownRemark(
+          sort: { frontmatter: { date: ASC } }, 
+          limit: 1000,
+          filter: {frontmatter: {type: {eq: "page"}}}
+          ) {
+          nodes {
+            id
+            fields {
+              slug
+            }
           }
         }
       }
-    }
   `)
 
   if (result.errors) {
@@ -38,11 +55,8 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
     return
   }
 
-  const posts = result.data.allMarkdownRemark.nodes
-
-  // Create blog posts pages
-  // But only if there's at least one markdown file found at "content/blog" (defined in gatsby-config.js)
-  // `context` is available in the template as a prop and as a variable in GraphQL
+  // Create Posts
+  const posts = result.data.posts.nodes
 
   if (posts.length > 0) {
     posts.forEach((post, index) => {
@@ -51,7 +65,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
 
       createPage({
         path: post.fields.slug,
-        component: blogPost,
+        component: postTemplate,
         context: {
           id: post.id,
           previousPostId,
@@ -60,6 +74,21 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
       })
     })
   }
+
+  // Create Pages
+  const pages = result.data.pages.nodes
+
+  if (pages.length > 0) {
+    pages.forEach((page) => {
+      createPage({
+        path: page.fields.slug,
+        component: pageTemplate,
+        context: {
+          id: page.id,
+        },
+      })
+    })
+}
 }
 
 /**
