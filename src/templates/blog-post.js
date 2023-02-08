@@ -4,8 +4,6 @@ import { Link, graphql } from "gatsby"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 
-import { StaticImage } from "gatsby-plugin-image"
-
 const BlogPostTemplate = ({
   data: { previous, next, site, markdownRemark: post },
   location,
