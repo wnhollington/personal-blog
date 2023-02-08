@@ -10,13 +10,13 @@ const Hits = ({ hits }) => (
   <div className="grid gap-5 row-gap-5 mb-8 lg:grid-cols-3 sm:grid-cols-2">
     {hits.map(hit => (
       <Link
-        to={`${hit.fields.slug}`}
+        to={`${hit.slug}`}
         aria-label="View Item"
         className="inline-block overflow-hidden duration-300 transform bg-white rounded shadow-sm hover:-translate-y-2"
       >
         <div className="flex flex-col h-full">
           <img
-            src={hit.img}
+            src={hit.featured_image}
             className="object-cover w-full h-48"
             alt={hit.title}
           />

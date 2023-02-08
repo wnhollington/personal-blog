@@ -11,6 +11,7 @@ const pageQuery = `{
           title
           date
           description
+          featured_image
         }
         id
       }

@@ -1,6 +1,8 @@
 ---
 title: My Second Post!
 date: "2015-05-06T23:46:37.121Z"
+featured-image: https://res.cloudinary.com/wnhollington/image/upload/v1664330324/colorado-construction-claims/istockphoto-629822156-612x612_d5ixvv.jpg
+description: This is my second post
 type: "post"
 ---
 
