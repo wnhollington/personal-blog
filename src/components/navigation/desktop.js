@@ -16,7 +16,7 @@ const DesktopNav = () => {
               <div className="flex flex-col py-4 items-center">
                 <Link to="/">Home</Link>
                 <Link to="/about">About</Link>
-                <Link to="/">Articles</Link>
+                <Link to="/blog">Articles</Link>
                 <Link to="/contact">Contact</Link>
                 <Link to="/schedule-consultation">Schedule Consultation</Link>
               </div>
