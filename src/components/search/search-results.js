@@ -10,7 +10,7 @@ const Hits = ({ hits }) => (
   <div className="grid gap-5 row-gap-5 mb-8 lg:grid-cols-3 sm:grid-cols-2">
     {hits.map(hit => (
       <Link
-        to={`/blog/${hit.slug}`}
+        to={`${hit.fields.slug}`}
         aria-label="View Item"
         className="inline-block overflow-hidden duration-300 transform bg-white rounded shadow-sm hover:-translate-y-2"
       >

@@ -4,6 +4,9 @@ const pageQuery = `{
   articles: allMarkdownRemark(filter: {frontmatter: {type: {eq: "post"}}}){
     edges {
       node {
+        fields {
+          slug
+        }
         frontmatter {
           title
           date
@@ -15,9 +18,10 @@ const pageQuery = `{
   }
 }`
 
-function pageToAlgoliaRecord({ node: { id, frontmatter, ...rest } }) {
+function pageToAlgoliaRecord({ node: { id, fields, frontmatter, ...rest } }) {
   return {
     objectID: id,
+    ...fields,
     ...frontmatter,
     ...rest
   }
