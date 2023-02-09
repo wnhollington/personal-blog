@@ -3,6 +3,7 @@ import { Link, graphql } from "gatsby"
 
 import Layout from "../components/layout"
 import Seo from "../components/seo"
+import { AiFillClockCircle } from "react-icons/ai"
 
 const BlogPostTemplate = ({
   data: { previous, next, site, markdownRemark: post },
@@ -19,8 +20,12 @@ const BlogPostTemplate = ({
       >
         <header>
           <h1 itemProp="headline">{post.frontmatter.title}</h1>
+          <div className="flex">
+            <p>{post.frontmatter.date}</p>
+            <p><AiFillClockCircle className="inline"/>{post.timeToRead} {post.timeToRead > 1 ? "mins" : "min"}</p>
+          </div>
           <img src={post.frontmatter.featured_image} alt={post.frontmatter.title}/>
-          <p>{post.frontmatter.date}</p>
+          <p>{post.frontmatter.description}</p>
         </header>
         <section
           dangerouslySetInnerHTML={{ __html: post.html }}
@@ -91,6 +96,7 @@ export const pageQuery = graphql`
         description
         featured_image
       }
+      timeToRead
     }
     previous: markdownRemark(id: { eq: $previousPostId }) {
       fields {
