@@ -1,4 +1,3 @@
 - styles
 - features
-  - md footnotes
-  - 
+  - social icons

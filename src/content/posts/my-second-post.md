@@ -14,3 +14,8 @@ egg yolk will be less rich."?
 ([Wikipedia Link](https://en.wikipedia.org/wiki/Salted_duck_egg))
 
 Yeah, I didn't either.
+
+Footnotes[^1] have a label[^@#$%] and the footnote's content.
+
+[^1]: This is a footnote content.
+[^@#$%]: A footnote on the label: "@#$%"
