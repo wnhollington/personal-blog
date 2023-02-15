@@ -1,7 +1,7 @@
 const indexName = `Articles`
 
 const pageQuery = `{
-  articles: allMarkdownRemark(filter: {frontmatter: {type: {eq: "post"}}}){
+  articles: allMarkdownRemark(filter: {frontmatter: {type: {eq: "Post"}}}){
     edges {
       node {
         fields {
