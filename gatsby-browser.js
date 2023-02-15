@@ -1,10 +1,4 @@
-// custom typefaces
-import "@fontsource/montserrat/variable.css"
-import "@fontsource/merriweather"
-
 // normalize CSS across browsers
-import "./src/styles/normalize.css"
-import "./src/styles/style.css"
 import "./src/styles/global.css"
 
 // Highlighting for code blocks

@@ -24,14 +24,14 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        path: `${__dirname}/content/posts`,
+        path: `${__dirname}/src/content/posts`,
         name: `posts`,
       },
     },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        path: `${__dirname}/content/pages`,
+        path: `${__dirname}/src/content/pages`,
         name: `pages`,
       },
     },
@@ -133,6 +133,5 @@ module.exports = {
         queries: require("./src/utils/algolia-queries")
       },
     },
-    `gatsby-plugin-netlify-cms`
   ],
 }
