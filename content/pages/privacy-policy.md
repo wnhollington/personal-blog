@@ -1,10 +1,7 @@
 ---
 title: Privacy Policy
-slug: privacy-policy
 date: 2022-05-21T02:45:02.212Z
-lastmod: 2019-08-22T15:20:28.000Z
-draft: true
-type: page
+type: Page
 ---
 
 This privacy policy governs the manner in which the Colorado Journal of Construction Law collects, uses, maintains, and discloses information collected from readers (each, a “Reader”) of the https://www.cjocl.com website (“Site”). This privacy policy applies to the Site and all products and services offered by this Site.

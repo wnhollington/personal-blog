@@ -55,13 +55,10 @@ export const pageQuery = graphql`
     }
     markdownRemark(id: { eq: $id }) {
       id
-      excerpt(pruneLength: 160)
       html
       frontmatter {
         title
         date(formatString: "MMMM DD, YYYY")
-        description
-        type
       }
     }
   }

@@ -8,7 +8,7 @@ const path = require(`path`)
 const { createFilePath } = require(`gatsby-source-filesystem`)
 
 // Define the template for blog post
-const postTemplate = path.resolve(`./src/templates/blog-post.js`)
+const postTemplate = path.resolve(`./src/templates/post.js`)
 const pageTemplate = path.resolve(`./src/templates/page.js`)
 
 /**
@@ -35,7 +35,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
         pages: allMarkdownRemark(
           sort: { frontmatter: { date: ASC } }, 
           limit: 1000,
-          filter: {frontmatter: {type: {eq: "page"}}}
+          filter: {frontmatter: {type: {eq: "Page"}}}
           ) {
           nodes {
             id

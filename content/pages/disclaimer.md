@@ -1,10 +1,7 @@
 ---
 title: Disclaimer
-slug: disclaimer
 date: 2022-05-21T02:46:28.307Z
-lastmod: 2019-08-22T15:20:28.000Z
-draft: true
-type: page
+type: Page
 ---
 
 The fine print. Because we’re lawyers and we worry about these sorts of things.
