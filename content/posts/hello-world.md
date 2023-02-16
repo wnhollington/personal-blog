@@ -1,9 +1,9 @@
 ---
 title: Hello World
 date: 2015-05-01T22:12:03.284Z
+type: Post
 description: Hello World
 featured-image: https://res.cloudinary.com/wnhollington/image/upload/v1675715155/sample.jpg
-type: Post
 ---
 This is my first post on my new fake blog! How exciting!
 
@@ -254,3 +254,11 @@ This paragraph has some `code` in it.
 ```
 ![Alt Text](https://via.placeholder.com/200x50 "Image Title")
 ```
+
+# Test of Footnotes
+
+Here's a first footnote [^1] and here's the second number footnote [^2]. We can also insert a third number footnote [^3]. There can be multiple footnotes in a document.   
+
+[^1]: This is the first number footnote.\
+[^2]: This is the first number footnote.\
+[^3]: This is the first number footnote.
