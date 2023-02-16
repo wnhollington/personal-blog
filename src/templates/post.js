@@ -13,27 +13,26 @@ const BlogPostTemplate = ({
 
   return (
     <Layout location={location} title={siteTitle}>
-      <article
-        className="max-w-3xl mx-auto"
-        itemScope
-        itemType="http://schema.org/Article"
-      >
-        <header>
-          <h1 itemProp="headline">{post.frontmatter.title}</h1>
-          <div className="flex">
+      <article className="max-w-5xl mx-auto mb-4 py-2">
+        
+        <header className="text-center my-4">
+          <h1>{post.frontmatter.title}</h1>
+          <div className="flex justify-center gap-4">
             <p>{post.frontmatter.date}</p>
-            <p><AiFillClockCircle className="inline"/>{post.timeToRead} {post.timeToRead > 1 ? "mins" : "min"}</p>
+            <p><AiFillClockCircle className="mr-2 inline"/>{post.timeToRead} {post.timeToRead > 1 ? "minutes" : "minute"}</p>
           </div>
-          <img src={post.frontmatter.featured_image} alt={post.frontmatter.title}/>
+          <img src={post.frontmatter.featured_image} alt={post.frontmatter.title} className="py-2 mx-auto"/>
           <p>{post.frontmatter.description}</p>
         </header>
+        
         <section
           dangerouslySetInnerHTML={{ __html: post.html }}
           itemProp="articleBody"
         />
-        <hr />
 
       </article>
+
+      {/* Navigation */}
       <nav className="max-w-3xl mx-auto">
         <ul
           style={{
@@ -60,6 +59,7 @@ const BlogPostTemplate = ({
           </li>
         </ul>
       </nav>
+      
     </Layout>
   )
 }

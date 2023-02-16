@@ -1,3 +1,5 @@
 - styles
 - features
-  - social icons
+  - social share
+  - google analytics
+  - mailchimp

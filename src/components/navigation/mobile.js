@@ -1,5 +1,6 @@
 import * as React from "react"
 
+import { Link } from "gatsby"
 import {GrClose} from "react-icons/gr"
 import {RxHamburgerMenu} from "react-icons/rx"
 import Drawer from 'react-modern-drawer'
@@ -15,7 +16,7 @@ const MobileNav = () => {
 
   return (
         <nav className="navbar navbar-expand-lg shadow-md p-4 bg-white relative flex items-center w-full justify-between">
-          <h1>W. Neal Hollington</h1>
+          <Link to="/" className="font-semibold text-lg">W. Neal Hollington</Link>
           
           <Drawer
               open={isOpen}

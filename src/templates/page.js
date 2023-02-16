@@ -13,7 +13,7 @@ const PageTemplate = ({
   return (
     <Layout location={location} title={siteTitle}>
       <article
-        className="max-w-3xl mx-auto"
+        className="max-w-5xl mx-auto"
         itemScope
         itemType="http://schema.org/Article"
       >
@@ -25,7 +25,6 @@ const PageTemplate = ({
           dangerouslySetInnerHTML={{ __html: page.html }}
           itemProp="articleBody"
         />
-        <hr />
 
       </article>
 

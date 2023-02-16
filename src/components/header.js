@@ -17,6 +17,7 @@ const Header= () => {
       <div className="hidden md:block">
         <DesktopNav/>
       </div>
+
     </header>
   )
 }

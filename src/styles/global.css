@@ -1,3 +1,38 @@
 @tailwind base;
+
+@layer base {
+    article h1 {
+        @apply text-4xl
+    }
+    article h2 {
+        @apply text-3xl
+    }
+    article h3 {
+        @apply text-2xl
+    }
+    article h4 {
+        @apply text-xl
+    }
+    article p {
+        @apply text-lg py-2
+    }
+    article h1, h2, h3, h4, h5, h6 {
+        @apply font-semibold py-2
+    }
+    article a {
+        @apply text-primary-800 underline decoration-dotted
+    }
+    article a:hover {
+        @apply text-primary-900 decoration-solid
+    }
+    ::selection {
+        @apply text-white bg-primary-900
+    }
+    hr {
+        @apply my-2
+    }
+}
+
 @tailwind components;
+
 @tailwind utilities;

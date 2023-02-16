@@ -11,10 +11,10 @@ const Index = ({ data, location }) => {
     <Layout location={location} title={siteTitle}>
       <div className="flex h-screen w-full">
         <div className="flex-1 bg-hero bg-cover bg-center bg-no-repeat flex justify-center items-center">
-          <div className="flex flex-col items-center">
-            <h1>{siteTitle}</h1>
-            <p>{data.site.siteMetadata.description}</p>
-            <Link to="/about" className="button">About Me</Link>
+          <div className="flex flex-col items-center p-2 backdrop-blur-sm bg-white/3 border-t-2 border-b-2">
+            <h1 className="text-3xl font-bold">{siteTitle}</h1>
+            <p className="text-xl font-semibold">{data.site.siteMetadata.description}</p>
+            <Link to="/about" className="text-lg font-semibold text-primary-800 underline decoration-dotted hover:decoration-solid">About Me</Link>
           </div>
         </div>
       </div>

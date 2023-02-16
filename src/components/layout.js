@@ -9,7 +9,7 @@ const Layout = ({ children }) => {
         <Header />
       </div>
       <main className="md:flex-1 md:flex overflow-hidden">
-        <div className="flex-1 overflow-y-scroll">{children}</div>
+        <div className="flex-1 overflow-y-scroll m-2 2-4">{children}</div>
       </main>
     </div>
   )
