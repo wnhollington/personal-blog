@@ -15,6 +15,7 @@
     "gatsby-plugin-algolia": "^1.0.3",
     "gatsby-plugin-feed": "^5.5.0",
     "gatsby-plugin-image": "^3.5.0",
+    "gatsby-plugin-mailchimp": "^5.2.2",
     "gatsby-plugin-manifest": "^5.5.0",
     "gatsby-plugin-sharp": "^5.5.0",
     "gatsby-remark-footnotes": "^0.0.8",

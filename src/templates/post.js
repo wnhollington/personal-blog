@@ -4,6 +4,7 @@ import { Link, graphql } from "gatsby"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 import { AiFillClockCircle } from "react-icons/ai"
+import NewsletterSignup from "../components/signup"
 
 const BlogPostTemplate = ({
   data: { previous, next, site, markdownRemark: post },
@@ -33,7 +34,7 @@ const BlogPostTemplate = ({
       </article>
 
       {/* Navigation */}
-      <nav className="max-w-3xl mx-auto">
+      <nav className="max-w-5xl mx-auto">
         <ul
           style={{
             display: `flex`,
@@ -59,6 +60,9 @@ const BlogPostTemplate = ({
           </li>
         </ul>
       </nav>
+
+      {/* Signup */}
+      <NewsletterSignup />
       
     </Layout>
   )
