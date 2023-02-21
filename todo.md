@@ -1,5 +1,7 @@
 - styles
+  - Pagination
 - features
+  - footnotes
   - social share
   - google analytics
   - mailchimp

@@ -1,9 +1,10 @@
 import * as React from "react"
+import { useState } from "react";
 import { useSiteMetadata } from '../../hooks/use-site-metadata'
 import { Link } from "gatsby"
 import Bio from "../bio";
-import {AiFillLinkedin, AiFillTwitterSquare } from "react-icons/ai"
 import {GrGatsbyjs} from "react-icons/gr"
+import {FaRssSquare, FaLinkedin, FaTwitterSquare} from "react-icons/fa"
 
 // Active Links
 const isActive = ({ isCurrent }) => {
@@ -15,7 +16,14 @@ const ExactNavLink = props => (
 )
 
 const DesktopNav = () => {
-  const {social} = useSiteMetadata();
+  const {siteUrl, social} = useSiteMetadata();
+
+  const [textCopied, setTextCopied ] = useState(false)
+
+  const copy = () => {
+    navigator.clipboard.writeText(`${siteUrl}/rss.xml`)
+    setTextCopied(!textCopied)
+  }
   return (
           <div className="navigation flex flex-col items-center gap-10">
 
@@ -32,8 +40,13 @@ const DesktopNav = () => {
               <div className="py-4 flex flex-col items-center">
                 <h2>Follow Me</h2>
                 <div className="flex flex-row">
-                  <a href={social.linkedin} target="_blank" className="hover:text-red-900"><AiFillLinkedin size={28}/></a>
-                  <a href={social.twitter} target="_blank" className="hover:text-red-900"><AiFillTwitterSquare size={28}/></a>
+                  <a href={social.linkedin} target="_blank" className="text-slate-800 hover:text-red-900 m-1"><FaLinkedin size={28}/></a>
+                  <a href={social.twitter} target="_blank" className="text-slate-800 hover:text-red-900 m-1"><FaTwitterSquare size={28}/></a>
+                  <button onClick={copy} className="text-slate-800 hover:text-red-900 m-1"><FaRssSquare size={28}/></button>
+                  <div className={textCopied === true ? "absolute p-8 bottom-4 right-4 bg-slate-800 text-white animate-fade" : "hidden"}>
+                    <p>RSS Feed Copied to Clipboard</p>
+                    <p className="absolute right-2 top-1 hover:cursor-pointer" onClick={copy}>X</p>
+                  </div>
                 </div>
               </div>
 
