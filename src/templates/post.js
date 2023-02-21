@@ -5,6 +5,7 @@ import Layout from "../components/layout"
 import Seo from "../components/seo"
 import { AiFillClockCircle } from "react-icons/ai"
 import NewsletterSignup from "../components/signup"
+import SocialShare from "../components/socialShare"
 
 const BlogPostTemplate = ({
   data: { previous, next, site, markdownRemark: post },
@@ -63,7 +64,10 @@ const BlogPostTemplate = ({
 
       {/* Signup */}
       <NewsletterSignup />
-      
+
+      {/* Social Share */}
+      <SocialShare url={post.fields.slug} title={post.frontmatter.title} description={post.frontmatter.description} />
+
     </Layout>
   )
 }
@@ -94,6 +98,9 @@ export const pageQuery = graphql`
       id
       excerpt(pruneLength: 160)
       html
+      fields {
+        slug
+      }
       frontmatter {
         title
         date(formatString: "MMMM DD, YYYY")
