@@ -2,6 +2,7 @@
  * @type {import('gatsby').GatsbyConfig}
  */
 require('dotenv').config();
+const siteUrl = `https://www.nealhollington.com`
 module.exports = {
   siteMetadata: {
     title: `W. Neal Hollington`,
@@ -168,5 +169,65 @@ module.exports = {
     //     },
     //   },
     // },
+    {
+      resolve: 'gatsby-plugin-sitemap',
+      options: {
+        output: '/',
+        query: `
+        {
+          site {
+            siteMetadata {
+              siteUrl
+            }
+          }
+          allSitePage {
+            nodes {
+              path
+            }
+          }
+          allMarkdownRemark {
+            nodes {
+              frontmatter {
+                date
+              },
+              fields {
+                slug
+              }
+            }
+          }
+        }`,
+        resolveSiteUrl: () => siteUrl,
+        resolvePages: ({
+          allSitePage: { nodes: allPages },
+          allMarkdownRemark: { nodes: allPosts },
+        }) => {
+          const pathToDateMap = {};
+      
+          allPosts.map(post => {
+            pathToDateMap [post.fields.slug] = { date: post.frontmatter.date };
+          });
+      
+          const pages = allPages.map(page => {
+            return { ...page, ...pathToDateMap [page.path] };
+          });
+      
+          return pages;
+        },
+        serialize: ({ path, date }) => {
+          let entry = {
+            url: path,
+            changefreq: 'daily',
+            priority: 0.5,
+          };
+      
+          if (date) {
+            entry.priority = 0.7;
+            entry.lastmod = date;
+          }
+      
+          return entry;
+        }
+      }
+    }
   ],
 }

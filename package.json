@@ -19,6 +19,7 @@
     "gatsby-plugin-mailchimp": "^5.2.2",
     "gatsby-plugin-manifest": "^5.5.0",
     "gatsby-plugin-sharp": "^5.5.0",
+    "gatsby-plugin-sitemap": "^6.7.0",
     "gatsby-remark-footnotes": "^0.0.8",
     "gatsby-remark-images": "^7.5.0",
     "gatsby-remark-responsive-iframe": "^6.5.0",
