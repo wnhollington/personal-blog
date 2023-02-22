@@ -151,6 +151,22 @@ module.exports = {
       options: {
           endpoint: process.env.MAILCHIMP_ENDPOINT
       }
-    }
+    },
+    // {
+    //   resolve: `gatsby-plugin-google-gtag`,
+    //   options: {
+    //     trackingIds: [
+    //       process.env.GA_TRACKING_ID
+    //     ],
+    //     gtagConfig: {
+    //       anonymize_ip: true,
+    //       cookie_expires: 0,
+    //     },
+    //     pluginConfig: {
+    //       head: false,
+    //       respectDNT: true,
+    //     },
+    //   },
+    // },
   ],
 }

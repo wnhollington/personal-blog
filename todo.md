@@ -1,6 +1,5 @@
 - styles
   - Pagination
 - features
-  - social share
   - google analytics
   - smooth scroll
