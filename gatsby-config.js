@@ -2,7 +2,7 @@
  * @type {import('gatsby').GatsbyConfig}
  */
 require('dotenv').config();
-const siteUrl = `https://www.nealhollington.com`
+const siteUrl = process.env.URL || `https://www.nealhollington.com`
 module.exports = {
   siteMetadata: {
     title: `W. Neal Hollington`,
@@ -11,7 +11,7 @@ module.exports = {
       summary: `Attorney and Author`,
     },
     description: `Personal blog for W. Neal Hollington`,
-    siteUrl: `https://www.nealhollington.com/`,
+    siteUrl: process.env.URL || `https://www.nealhollington.com/`,
     social: {
       twitter: `https://www.twitter.com/wnealhollington`,
       linkedin: `https://www.linkedin.com/in/wnhollington`
