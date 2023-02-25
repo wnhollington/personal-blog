@@ -44,10 +44,12 @@ export default function Search({ indices }) {
       <h2 class="text-3xl font-semibold tracking-tight text-gray-800 xl:text-4xl text-center">
           Articles
       </h2>
-      <section class="flex flex-col sm:flex-row justify-center items-center my-4">
+      <section class="flex flex-col sm:flex-row justify-center items-center my-4 gap-2">
           <SearchBox />
-          <CustomMenuSelect attribute="category" type="All Categories"/>
-          <CustomMenuSelect attribute="tags" type="All Tags"/>
+          <div className="flex gap-2">
+            <CustomMenuSelect attribute="category" type="All Categories"/>
+            <CustomMenuSelect attribute="tags" type="All Tags"/>
+          </div>
       </section>
 
       <SearchResult
