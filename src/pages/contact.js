@@ -6,7 +6,7 @@ import Seo from "../components/seo"
 
 const Contact = () => (
   <Layout>
-    <div className="w-full flex flex-col items-center justify-center">
+    <div className="w-full flex flex-col items-center justify-center my-2 py-4">
       <h1 className="max-w-lg mb-4 font-sans text-3xl font-bold leading-none tracking-tight text-gray-900 sm:text-4xl md:mx-auto text-center">Contact Me</h1>
       <form name="contact" method="POST" data-netlify="true" action="/blog" className="bg-white py-6 lg:px-28 px-8">
           <input type="hidden" name="form-name" value="contact"/>

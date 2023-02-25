@@ -8,7 +8,9 @@ const searchIndices = [{ name: `Articles`, title: `Articles` }]
 
 const Blog = () => (
   <Layout>
-    <Search indices={searchIndices} />
+    <div className="my-2 py-4">
+      <Search indices={searchIndices} />
+    </div>
   </Layout>
 )
 

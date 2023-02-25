@@ -8,14 +8,15 @@ module.exports = {
     title: `W. Neal Hollington`,
     author: {
       name: `W. Neal Hollington`,
-      summary: `Attorney and Author`,
+      summary: `Business and Employment Lawyer`,
     },
     description: `Personal blog for W. Neal Hollington`,
     siteUrl: process.env.URL || `https://www.nealhollington.com/`,
     social: {
       twitter: `https://www.twitter.com/wnealhollington`,
-      linkedin: `https://www.linkedin.com/in/wnhollington`
+      linkedin: `https://www.linkedin.com/in/wnhollington`,
     },
+    talksAbout: ['businesslaw', 'employmentlaw', 'trials']
   },
   plugins: [
     `gatsby-plugin-image`,
