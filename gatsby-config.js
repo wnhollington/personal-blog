@@ -14,7 +14,7 @@ module.exports = {
     siteUrl: process.env.URL || `https://www.nealhollington.com/`,
     social: {
       twitter: `https://www.twitter.com/wnealhollington`,
-      linkedin: `https://www.linkedin.com/in/wnhollington`
+      linkedin: `https://www.linkedin.com/in/wnhollington`,
     },
   },
   plugins: [

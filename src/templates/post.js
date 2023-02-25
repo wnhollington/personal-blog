@@ -41,7 +41,7 @@ const BlogPostTemplate = ({
       {/* Navigation */}
       <nav className="max-w-5xl mx-auto">
         <h2 className="text-lg">Keep Reading</h2>
-        <ul className="flex flex-wrap justify-between">
+        <ul className="flex flex-wrap justify-between w-2xl mx-auto">
           <li>
             {previous && (
               <Link to={previous.fields.slug} rel="prev" aria-label={previous.frontmatter.title} title={previous.frontmatter.title} className="inline-flex items-center py-2 px-4 text-sm font-medium text-gray-500 bg-white rounded-lg border border-gray-300 hover:bg-gray-100 hover:text-gray-700">
@@ -86,6 +86,10 @@ export const pageQuery = graphql`
     site {
       siteMetadata {
         title
+        social {
+          twitter
+          linkedin
+        }
       }
     }
     markdownRemark(id: { eq: $id }) {
