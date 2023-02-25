@@ -23,8 +23,11 @@ const BlogPostTemplate = ({
             <p>{post.frontmatter.date}</p>
             <p><AiFillClockCircle className="mr-2 inline"/>{post.timeToRead} {post.timeToRead > 1 ? "minutes" : "minute"}</p>
           </div>
+          {/* Social Share */}
+          <SocialShare url={post.fields.slug} title={post.frontmatter.title} description={post.frontmatter.description} />
           <img src={post.frontmatter.featured_image} alt={post.frontmatter.title} className="py-2 mx-auto"/>
           <p>{post.frontmatter.description}</p>
+          <div class="my-12 h-1 bg-gray-200 w-20 mx-auto"></div>
         </header>
         
         <section
@@ -64,9 +67,6 @@ const BlogPostTemplate = ({
 
       {/* Signup */}
       <NewsletterSignup />
-
-      {/* Social Share */}
-      <SocialShare url={post.fields.slug} title={post.frontmatter.title} description={post.frontmatter.description} />
 
     </Layout>
   )

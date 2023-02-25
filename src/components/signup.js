@@ -34,17 +34,19 @@ export default class NewsletterSignup extends React.Component {
 
     render () {
         return (
-            <form onSubmit={this._handleSubmit} id={"signup-form"} className="max-w-5xl mx-auto"> 
-                <div className="flex flex-col space-y-3 sm:space-y-0 sm:flex-row sm:-mx-2">
-                    
-                    <input onChange={this.handleEmail} type="email" label="email" name="email" id="email" className="px-4 py-2 text-gray-700 bg-white border border-gray-300 rounded-md sm:mx-2 focus:border-primary-400 focus:ring-primary-300 focus:outline-none focus:ring focus:ring-opacity-40" placeholder="Email Address" required/>
+            <div className='max-w-2xl mx-auto my-6 p-6 flex flex-col items-center bg-primary-900'>
+                <h2 className='text-2xl text-white'>Subscribe</h2>
+                <p className='text-lg text-gray-100 m-w-md mx-auto'>Subscribe to receive content directly in your inbox.</p>
+                <form onSubmit={this._handleSubmit} id={"signup-form"} className="flex flex-col items-center my-4 m-w-sm"> 
+                    <div className="flex flex-col space-y-3 sm:space-y-0 sm:flex-row sm:mx-2 w-full">
+                        <input onChange={this.handleEmail} type="email" label="email" name="email" id="email" className="flex-grow px-4 py-2 text-gray-700 bg-white border border-gray-300 rounded-md sm:mx-2  focus:ring-primary-400 focus:outline-none focus:ring focus:ring-opacity-40" placeholder="Email Address" required/>
 
-                    <input type="submit" label="submit" id="submit" value="Signup" className="px-4 py-2 text-sm font-medium tracking-wide text-white capitalize transition-colors duration-200 transform bg-primary-700 rounded-md focus:ring focus:ring-primary-300 focus:ring-opacity-80 fo sm:mx-2 hover:bg-primary-600 focus:outline-none focus:bg-primary-600 hover:cursor-pointer" />
+                        <input type="submit" label="submit" id="submit" value="Signup" className="px-4 py-2 text-sm font-medium tracking-wide text-white capitalize transition-colors duration-200 transform bg-gray-700 rounded-md focus:ring focus:ring-primary-500 focus:ring-opacity-80 sm:mx-2 hover:bg-gray-800 focus:outline-none focus:bg-gray-800 hover:cursor-pointer" />
 
-                </div>
-
-                <p class="mt-3 text-sm text-gray-500">{this.state.message}</p>
-            </form>
+                    </div>
+                    <p class="mt-3 text-sm text-gray-100">{this.state.message}</p>
+                </form>
+            </div>
         )
     }
 }
