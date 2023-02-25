@@ -3,9 +3,9 @@ import { Link, graphql } from "gatsby"
 
 import Layout from "../components/layout"
 import Seo from "../components/seo"
-import { AiFillClockCircle } from "react-icons/ai"
 import NewsletterSignup from "../components/signup"
 import SocialShare from "../components/socialShare"
+import { FaArrowLeft, FaArrowRight } from "react-icons/fa"
 
 const BlogPostTemplate = ({
   data: { previous, next, site, markdownRemark: post },
@@ -21,7 +21,8 @@ const BlogPostTemplate = ({
           <h1>{post.frontmatter.title}</h1>
           <div className="flex justify-center gap-4">
             <p>{post.frontmatter.date}</p>
-            <p><AiFillClockCircle className="mr-2 inline"/>{post.timeToRead} {post.timeToRead > 1 ? "minutes" : "minute"}</p>
+            <p>&middot;</p>
+            <p>{post.timeToRead} minute read</p>
           </div>
           {/* Social Share */}
           <SocialShare url={post.fields.slug} title={post.frontmatter.title} description={post.frontmatter.description} />
@@ -39,26 +40,19 @@ const BlogPostTemplate = ({
 
       {/* Navigation */}
       <nav className="max-w-5xl mx-auto">
-        <ul
-          style={{
-            display: `flex`,
-            flexWrap: `wrap`,
-            justifyContent: `space-between`,
-            listStyle: `none`,
-            padding: 0,
-          }}
-        >
+        <h2 className="text-lg">Keep Reading</h2>
+        <ul className="flex flex-wrap justify-between">
           <li>
             {previous && (
-              <Link to={previous.fields.slug} rel="prev">
-                ← {previous.frontmatter.title}
+              <Link to={previous.fields.slug} rel="prev" aria-label={previous.frontmatter.title} title={previous.frontmatter.title} className="inline-flex items-center py-2 px-4 text-sm font-medium text-gray-500 bg-white rounded-lg border border-gray-300 hover:bg-gray-100 hover:text-gray-700">
+                <h3 className="flex items-center gap-4"><FaArrowLeft/>Previous Post</h3>
               </Link>
             )}
           </li>
           <li>
             {next && (
-              <Link to={next.fields.slug} rel="next">
-                {next.frontmatter.title} →
+              <Link to={next.fields.slug} rel="next" aria-label={next.frontmatter.title} title={next.frontmatter.title} className="inline-flex items-center py-2 px-4 text-sm font-medium text-gray-500 bg-white rounded-lg border border-gray-300 hover:bg-gray-100 hover:text-gray-700">
+                <h3 className="flex items-center justify-right gap-4">Next Post<FaArrowRight/></h3>
               </Link>
             )}
           </li>
@@ -115,6 +109,8 @@ export const pageQuery = graphql`
       }
       frontmatter {
         title
+        description
+        featured_image
       }
     }
     next: markdownRemark(id: { eq: $nextPostId }) {
@@ -123,6 +119,8 @@ export const pageQuery = graphql`
       }
       frontmatter {
         title
+        description
+        featured_image
       }
     }
   }

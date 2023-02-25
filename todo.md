@@ -1,5 +1,4 @@
 - styles
   - Pagination
 - features
-  - google analytics
   - smooth scroll
