@@ -34,7 +34,7 @@ export default class NewsletterSignup extends React.Component {
 
     render () {
         return (
-            <div className='max-w-2xl mx-auto my-6 p-6 flex flex-col items-center bg-primary-900'>
+            <div className='max-w-2xl mx-auto my-8 p-6 flex flex-col items-center bg-primary-900 rounded-md'>
                 <h2 className='text-2xl text-white'>Subscribe</h2>
                 <p className='text-lg text-gray-100 m-w-md mx-auto'>Subscribe to receive content directly in your inbox.</p>
                 <form onSubmit={this._handleSubmit} id={"signup-form"} className="flex flex-col items-center my-4 m-w-sm"> 

@@ -38,10 +38,12 @@ const BlogPostTemplate = ({
 
       </article>
 
+      {/* Signup */}
+      <NewsletterSignup />
+
       {/* Navigation */}
-      <nav className="max-w-5xl mx-auto">
-        <h2 className="text-lg">Keep Reading</h2>
-        <ul className="flex flex-wrap justify-between w-2xl mx-auto">
+      <nav className="max-w-5xl mx-auto my-4">
+        <ul className="flex flex-wrap justify-between w-2xl mx-auto my-4">
           <li>
             {previous && (
               <Link to={previous.fields.slug} rel="prev" aria-label={previous.frontmatter.title} title={previous.frontmatter.title} className="inline-flex items-center py-2 px-4 text-sm font-medium text-gray-500 bg-white rounded-lg border border-gray-300 hover:bg-gray-100 hover:text-gray-700">
@@ -58,9 +60,6 @@ const BlogPostTemplate = ({
           </li>
         </ul>
       </nav>
-
-      {/* Signup */}
-      <NewsletterSignup />
 
     </Layout>
   )
