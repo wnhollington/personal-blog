@@ -6,12 +6,14 @@ import Seo from "../components/seo"
 import NewsletterSignup from "../components/signup"
 import SocialShare from "../components/socialShare"
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa"
+import { GatsbyImage } from "gatsby-plugin-image"
 
 const BlogPostTemplate = ({
   data: { previous, next, site, markdownRemark: post },
   location,
 }) => {
   const siteTitle = site.siteMetadata?.title || `Title`
+  const image = post.frontmatter.hero_image.childImageSharp.gatsbyImageData
 
   return (
     <Layout location={location} title={siteTitle}>
@@ -24,9 +26,10 @@ const BlogPostTemplate = ({
             <p>&middot;</p>
             <p>{post.timeToRead} minute read</p>
           </div>
-          {/* Social Share */}
           <SocialShare url={post.fields.slug} title={post.frontmatter.title} description={post.frontmatter.description} />
-          <img src={post.frontmatter.featured_image} alt={post.frontmatter.title} className="py-2 mx-auto"/>
+          <GatsbyImage 
+            image={image}
+          />
           <p>{post.frontmatter.description}</p>
           <div class="my-12 h-1 bg-gray-200 w-20 mx-auto"></div>
         </header>
@@ -102,7 +105,15 @@ export const pageQuery = graphql`
         title
         date(formatString: "MMMM DD, YYYY")
         description
-        featured_image
+        hero_image {
+          childImageSharp {
+            gatsbyImageData(
+              placeholder: BLURRED
+              layout: FULL_WIDTH
+              formats: [AUTO, WEBP, AVIF]
+            )
+          }
+        }
       }
       timeToRead
     }
@@ -113,7 +124,6 @@ export const pageQuery = graphql`
       frontmatter {
         title
         description
-        featured_image
       }
     }
     next: markdownRemark(id: { eq: $nextPostId }) {
@@ -123,7 +133,6 @@ export const pageQuery = graphql`
       frontmatter {
         title
         description
-        featured_image
       }
     }
   }

@@ -24,9 +24,10 @@
           "isPublishDate": true
         },
         {
-          "title": "Content preview",
-          "name": "preview",
-          "type": "image"
+          "title": "Featured Image",
+          "name": "featured_image",
+          "type": "image",
+          "isPreviewImage": true
         },
         {
           "title": "Is in draft",
@@ -81,7 +82,7 @@
     }
   ],
   "frontMatter.framework.id": "gatsby",
-  "frontMatter.content.publicFolder": "static",
+  "frontMatter.content.publicFolder": "src",
   "frontMatter.content.pageFolders": [
     {
       "title": "pages",

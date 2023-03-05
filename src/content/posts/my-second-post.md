@@ -2,8 +2,8 @@
 title: My Second Post!
 date: 2015-05-06T23:46:37.121Z
 description: This is my second post
-featured-image: https://res.cloudinary.com/wnhollington/image/upload/v1664330324/colorado-construction-claims/istockphoto-629822156-612x612_d5ixvv.jpg
 type: Post
+hero_image: ../../images/profile-pic.png
 ---
 
 Wow! I love blogging so much already.

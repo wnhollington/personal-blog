@@ -3,7 +3,7 @@ title: Hello World
 date: 2015-05-01T22:12:03.284Z
 type: Post
 description: Hello World
-featured-image: https://res.cloudinary.com/wnhollington/image/upload/v1675715155/sample.jpg
+hero_image: ../../images/profile-pic.png
 ---
 This is my first post on my new fake blog! How exciting!
 

@@ -4,8 +4,8 @@ date: 2015-05-28T22:40:32.169Z
 description: This is a custom description for SEO and Open Graph purposes,
   rather than the default generated excerpt. Simply add a description field to
   the frontmatter.
-featured-image: https://res.cloudinary.com/wnhollington/image/upload/v1649379274/small_license_plates_g82c8c542d_1920_08a1fcfdfd.jpg
 type: Post
+hero_image: ../../images/profile-pic.png
 ---
 
 Far far away, behind the word mountains, far from the countries Vokalia and

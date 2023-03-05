@@ -11,7 +11,11 @@ const pageQuery = `{
           title
           date
           description
-          featured_image
+          hero_image {
+            childImageSharp {
+              gatsbyImageData
+            }
+          }
         }
         id
       }
