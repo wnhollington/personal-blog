@@ -3,7 +3,7 @@ title: My Second Post!
 date: 2015-05-06T23:46:37.121Z
 description: This is my second post
 type: Post
-hero_image: ../../images/profile-pic.png
+hero_image: ../../images/small_license_plates.jpg
 ---
 
 Wow! I love blogging so much already.

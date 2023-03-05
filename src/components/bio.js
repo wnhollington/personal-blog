@@ -7,8 +7,15 @@ const Bio = () => {
 
   return (
     <div className="flex flex-col text-center">
-      <div class="w-44 p-4 mx-auto">
-        <StaticImage class="rounded-full" src="https://res.cloudinary.com/wnhollington/image/upload/c_thumb,g_face,r_max/v1663896646/Neal_Hollington_8b6ae1c8d6.jpg" alt={author.name} />
+      <div class="p-4 mx-auto">
+        <StaticImage 
+          class="rounded-full" 
+          height={150}
+          width={150}
+          placeholder="blurred"
+          src="../images/profile.jpg" 
+          alt={author.name} 
+        />
       </div>
       <h1 className="font-bold text-lg">{author.name}</h1>
       <p className="font-semibold">{author.summary}</p>

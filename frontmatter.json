@@ -24,8 +24,8 @@
           "isPublishDate": true
         },
         {
-          "title": "Featured Image",
-          "name": "featured_image",
+          "title": "Hero Image",
+          "name": "hero_image",
           "type": "image",
           "isPreviewImage": true
         },
@@ -86,8 +86,7 @@
   "frontMatter.content.pageFolders": [
     {
       "title": "pages",
-      "path": "[[workspace]]/src/content/pages",
-      "originalPath": "[[workspace]]/src/content/pages"
+      "path": "[[workspace]]/src/content/pages"
     },
     {
       "title": "posts",

@@ -3,7 +3,7 @@ title: Hello World
 date: 2015-05-01T22:12:03.284Z
 type: Post
 description: Hello World
-hero_image: ../../images/profile-pic.png
+hero_image: ../../images/small_license_plates.jpg
 ---
 This is my first post on my new fake blog! How exciting!
 
