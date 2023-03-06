@@ -44,7 +44,7 @@ export default function Search({ indices }) {
       <h2 class="text-3xl font-semibold tracking-tight text-gray-800 xl:text-4xl text-center">
           Articles
       </h2>
-      <section class="flex flex-col sm:flex-row justify-center items-center my-4 gap-2">
+      <section class="flex flex-col justify-center items-center my-4 gap-2">
           <SearchBox />
           <div className="flex gap-2">
             <CustomMenuSelect attribute="category" type="All Categories"/>
@@ -56,8 +56,6 @@ export default function Search({ indices }) {
         show={query && query.length > 0 && hasFocus}
         indices={indices}
       />
-
     </InstantSearch>
-
   )
 }

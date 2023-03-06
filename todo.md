@@ -1,4 +1,0 @@
-- styles
-  - Pagination
-- features
-  - smooth scroll

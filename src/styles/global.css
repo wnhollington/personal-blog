@@ -36,3 +36,20 @@
 @tailwind components;
 
 @tailwind utilities;
+
+/* Algolia */
+
+.ais-SearchBox {
+    @apply w-full text-center
+}
+
+.ais-SearchBox-input {
+    @apply rounded-md w-80 sm:w-96 md:w-8/12 lg:w-6/12 xl:w-4/12
+}
+
+.ais-SearchBox-submit {
+    @apply hidden
+}
+.ais-SearchBox-reset {
+    @apply ml-3
+}
