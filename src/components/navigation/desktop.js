@@ -30,9 +30,8 @@ const DesktopNav = () => {
               <Bio/>
 
               <div className="flex flex-col py-4 items-center">
-                <ExactNavLink to="/">Home</ExactNavLink>
+                <ExactNavLink to="/">Articles</ExactNavLink>
                 <ExactNavLink to="/about">About</ExactNavLink>
-                <ExactNavLink to="/blog">Articles</ExactNavLink>
                 <ExactNavLink to="/contact">Contact</ExactNavLink>
                 <ExactNavLink to="/schedule-consultation">Schedule Consultation</ExactNavLink>
               </div>
