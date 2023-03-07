@@ -7,16 +7,15 @@ const Bio = () => {
 
   return (
     <div className="flex flex-col text-center">
-      <div class="mx-auto border-2 rounded-full border-primary-900">
-        <StaticImage 
-          class="rounded-full" 
-          height={150}
-          width={150}
-          placeholder="blurred"
-          src="../images/profile.jpg" 
-          alt={author.name} 
-        />
-      </div>
+      <StaticImage 
+        className="mx-auto border-2 rounded-full border-primary-900"
+        imgClassName="rounded-full"
+        height={150}
+        width={150}
+        placeholder="blurred"
+        src="../images/profile.jpg" 
+        alt={author.name} 
+      />
       <h1 className="font-bold text-lg">{author.name}</h1>
       <p className="font-semibold">{author.summary}</p>
       <div>
