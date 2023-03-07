@@ -42,7 +42,7 @@ const DesktopNav = () => {
                   <a href={social.linkedin} target="_blank" className="text-slate-800 hover:text-red-900 m-1"><FaLinkedin size={28}/></a>
                   <a href={social.twitter} target="_blank" className="text-slate-800 hover:text-red-900 m-1"><FaTwitterSquare size={28}/></a>
                   <button onClick={copy} className="text-slate-800 hover:text-red-900 m-1"><FaRssSquare size={28}/></button>
-                  <div className={textCopied === true ? "absolute p-8 bottom-4 right-4 bg-slate-800 text-white animate-fade" : "hidden"}>
+                  <div className={textCopied === true ? "absolute p-8 bottom-4 right-4 bg-slate-800 text-white animate-fade z-40" : "hidden"}>
                     <p>RSS Feed Copied to Clipboard</p>
                     <p className="absolute right-2 top-1 hover:cursor-pointer" onClick={copy}>X</p>
                   </div>
