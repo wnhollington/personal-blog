@@ -25,7 +25,7 @@ const DesktopNav = () => {
     setTextCopied(!textCopied)
   }
   return (
-          <div className="navigation flex flex-col items-center gap-10">
+          <div className="h-screen overflow-y-auto overflow-x-auto flex flex-col gap-10">
 
               <Bio/>
 
@@ -50,7 +50,7 @@ const DesktopNav = () => {
               </div>
 
             <div className="py-4 flex flex-col items-center">
-              <div className="absolute bottom-3 text-center">
+              <div className="text-center">
                 <ExactNavLink to="/privacy-policy">Privacy Policy</ExactNavLink>
                 <ExactNavLink to="/disclaimer">Disclaimer</ExactNavLink>
               
