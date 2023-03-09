@@ -7,17 +7,9 @@ import DesktopNav from "./navigation/desktop"
 const Header= () => {
 
   return (
-    <header>
-      {/* Mobile Menu */}
-      <div className="flex flex-row justify-between md:hidden">
-        <MobileNav/>
-      </div>
-
-      {/* Desktop Menu */}
-      <div className="hidden md:block">
-        <DesktopNav/>
-      </div>
-
+    <header className="md:bg-white shadow-lg md:w-72">
+      <MobileNav/>
+      <DesktopNav/>
     </header>
   )
 }
