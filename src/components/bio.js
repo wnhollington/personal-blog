@@ -8,7 +8,7 @@ const Bio = () => {
   return (
     <div className="flex flex-col text-center">
       <StaticImage 
-        className="mx-auto border-2 rounded-full border-primary-900"
+        className="mx-auto border-2 rounded-full border-primary-900 mb-2"
         imgClassName="rounded-full"
         height={150}
         width={150}
