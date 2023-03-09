@@ -4,7 +4,7 @@ date: 2022-05-21T02:46:28.307Z
 type: Page
 ---
 
-The fine print. Because we’re lawyers and we worry about these sorts of things.
+The fine print. Because I'm a lawyer and worry about these sorts of things.
 
 ## Hyperlinks
 
@@ -12,8 +12,8 @@ This Site may contain links to other third-party resources on the Internet. Thes
 
 ## Reliance Upon Information Posted
 
-The information and content appearing on this Website are for informational purposes only and are not legal advice, and are not guaranteed to be complete, correct or up-to-date. The use of or access to this information and content does not constitute or create an attorney-client relationship. You should contact your own attorney to obtain advice with respect to any particular issue or problem. It is important that no conflict of interest be created between you and any of our current or past clients. Therefore, under no circumstance should you provide us with information pertaining to a matter without first speaking to one of our attorneys and receiving confirmation that the appropriate conflict checks have been cleared and that the firm is otherwise able to accept the engagement. You should not send any information to us until after you have received an engagement letter from us and a formal attorney-client relationship has been established, unless we otherwise specifically request such information. If you communicate with us through this Website, by email, or otherwise, concerning a legal matter for which we do not already represent you, your communication may not be protected as privileged or confidential.
+The information and content appearing on this Website are for informational purposes only and are not legal advice, and are not guaranteed to be complete, correct or up-to-date. The use of or access to this information and content does not constitute or create an attorney-client relationship. You should contact your own attorney to obtain advice with respect to any particular issue or problem. It is important that no conflict of interest be created between you and any of our current or past clients. Therefore, under no circumstance should you provide any information pertaining to a matter without first speaking with me and receiving confirmation that the appropriate conflict checks have been cleared and that my firm is otherwise able to accept the engagement. You should not send any information to through this site until after you have received an engagement letter and a formal attorney-client relationship has been established, unless I otherwise specifically request such information. If you communicate with me through this Website, by email, or otherwise, concerning a legal matter for which I do not already represent you, your communication may not be protected as privileged or confidential.
 
 ## Attorney Advertising
 
-Pursuant to applicable Rules of Professional Conduct, this Website may constitute advertising. In compliance with Colorado Rules of Professional Conduct, W. Neal Hollington, Esq., 5619 DTC Pkwy Suite 1200, Greenwood Village, CO 80111, is responsible for the content on this website. The hiring of a lawyer is an important decision that should not be based solely upon advertisements. All liability with respect to any actions taken or not taken based upon any or all the contents of this Site are expressly disclaimed.
+Pursuant to applicable Rules of Professional Conduct, this Website may constitutes attorney advertising. In compliance with Colorado Rules of Professional Conduct, W. Neal Hollington, Esq., 5619 DTC Pkwy Suite 1200, Greenwood Village, CO 80111, is responsible for the content on this website. The hiring of a lawyer is an important decision that should not be based solely upon advertisements. All liability with respect to any actions taken or not taken based upon any or all the contents of this Site are expressly disclaimed.
