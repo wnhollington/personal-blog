@@ -25,7 +25,7 @@ const DesktopNav = () => {
     setTextCopied(!textCopied)
   }
   return (
-          <div className="hidden h-screen overflow-y-auto md:flex flex-col gap-10 py-8">
+          <div className="h-screen overflow-y-auto flex flex-col gap-10 py-8">
 
               <Bio/>
 

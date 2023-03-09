@@ -9,7 +9,9 @@ const Header= () => {
   return (
     <header className="md:bg-white shadow-lg md:w-72">
       <MobileNav/>
-      <DesktopNav/>
+      <div className="hidden md:block">
+        <DesktopNav/>
+      </div>
     </header>
   )
 }
